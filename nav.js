@@ -105,11 +105,58 @@ function initMobileMenu() {
     }
 }
 
+// FORM SUBMISSION TO GOOGLE SHEETS
+function initFormSubmission() {
+    const regForm = document.getElementById('registrationForm');
+    const contactForm = document.querySelector('.contact-form-body form'); // Get contact form
+
+    const handleSubmission = (form) => {
+        if (!form) return;
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerText;
+            
+            // Show loading state
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            // --- IMPORTANT: Replace the URL below with your Google Apps Script Web App URL ---
+            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby-YOUR-SCRIPT-ID/exec';
+
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Essential for Google Apps Script
+                body: JSON.stringify(data)
+            })
+            .then(() => {
+                alert('Success! Your details have been recorded.');
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Something went wrong. Please try again.');
+            })
+            .finally(() => {
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+    };
+
+    handleSubmission(document.getElementById('registrationForm'));
+    handleSubmission(document.getElementById('contactForm'));
+}
+
 // INITIALIZE ALL
 document.addEventListener('DOMContentLoaded', () => {
     initLuxuryInteractions();
     initSectionReveals();
     initHeroSlideshow();
+    initFormSubmission();
     if (navbar) initNavbarScroll();
     initMobileMenu();
 });
