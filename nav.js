@@ -105,11 +105,26 @@ function initMobileMenu() {
     }
 }
 
+// SUCCESS POPUP LOGIC
+function showSuccessPopup() {
+    let popup = document.getElementById('successPopup');
+    if (!popup) {
+        popup = document.createElement('div');
+        popup.id = 'successPopup';
+        popup.className = 'success-popup';
+        popup.innerHTML = `
+            <div class="success-icon">✓</div>
+            <h2 class="gradient-text">Success!</h2>
+            <p>Your details have been recorded. Our team will contact you shortly.</p>
+            <button class="success-close-btn" onclick="this.parentElement.classList.remove('active')">Close</button>
+        `;
+        document.body.appendChild(popup);
+    }
+    setTimeout(() => popup.classList.add('active'), 100);
+}
+
 // FORM SUBMISSION TO GOOGLE SHEETS
 function initFormSubmission() {
-    const regForm = document.getElementById('registrationForm');
-    const contactForm = document.querySelector('.contact-form-body form'); // Get contact form
-
     const handleSubmission = (form) => {
         if (!form) return;
         form.addEventListener('submit', (e) => {
@@ -117,23 +132,21 @@ function initFormSubmission() {
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerText;
             
-            // Show loading state
             submitBtn.innerText = 'Sending...';
             submitBtn.disabled = true;
 
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
 
-            // --- IMPORTANT: Replace the URL below with your Google Apps Script Web App URL ---
             const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzXyRmnI9eKLRf--1AOMywv0gvM5YjMT45fWP4k1jzzWtBUn7yxtIHBYcfUVBkmDc-G/exec';
 
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
-                mode: 'no-cors', // Essential for Google Apps Script
+                mode: 'no-cors',
                 body: JSON.stringify(data)
             })
             .then(() => {
-                alert('Success! Your details have been recorded.');
+                showSuccessPopup();
                 form.reset();
             })
             .catch(error => {
