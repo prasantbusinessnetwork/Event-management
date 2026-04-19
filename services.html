@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | OPT Events</title>
+    <meta name="description" content="Explore the premium event management services by OPT Events in Odisha. From luxury weddings to corporate excellence.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .service-page-hero {
+            padding: 12rem 0 6rem;
+            text-align: center;
+            background: linear-gradient(rgba(13, 13, 13, 0.8), rgba(13, 13, 13, 0.9)), url('wedding_bhubaneswar_1776575552928.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-detail-section {
+            padding: 8rem 0;
+        }
+
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 8rem;
+        }
+
+        .service-detail-grid:nth-child(even) {
+            direction: rtl;
+        }
+
+        .service-detail-grid:nth-child(even) .service-content {
+            direction: ltr;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 500px;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .service-detail-grid:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        .service-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-content p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .feature-item i {
+            color: var(--luxury-gold);
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 992px) {
+            .service-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .service-image {
+                height: 350px;
+            }
+            .service-detail-grid:nth-child(even) {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- STICKY NAVIGATION -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo gradient-text">OPT</a>
+            <ul class="nav-links">
+                <li><a href="services.html" class="active" style="color: white;">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="padding: 0.7rem 1.8rem; font-size: 0.9rem;">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="service-page-hero">
+        <div class="container">
+            <span class="section-tag" style="justify-content: center;">Our Expertise</span>
+            <h1 class="section-title">Premium <span class="gradient-text">Event Services</span></h1>
+            <p class="section-desc" style="margin: 0 auto;">From intimate gatherings to grand celebrations, we provide end-to-end event management solutions with a focus on luxury and precision.</p>
+        </div>
+    </header>
+
+    <!-- SERVICES DETAIL SECTION -->
+    <section class="service-detail-section">
+        <div class="container">
+            
+            <!-- Service 1: Weddings -->
+            <div class="service-detail-grid">
+                <div class="service-image reveal">
+                    <img src="wedding_bhubaneswar_1776575552928.png" alt="Luxury Wedding">
+                </div>
+                <div class="service-content reveal reveal-delay-1">
+                    <span class="section-tag">Elegance & Celebration</span>
+                    <h2>Luxury <span class="gradient-text">Weddings</span></h2>
+                    <p>We turn your "Once Upon a Time" into a breathtaking reality. Our wedding planning services cover everything from venue selection and floral design to guest management and rituals coverage.</p>
+                    <div class="feature-list">
+                        <div class="feature-item">✦ Theme Decor</div>
+                        <div class="feature-item">✦ Ritual Management</div>
+                        <div class="feature-item">✦ Guest Logistics</div>
+                        <div class="feature-item">✦ Catering Excellence</div>
+                        <div class="feature-item">✦ Photography</div>
+                        <div class="feature-item">✦ Bridal Support</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline">Enquire Now</a>
+                </div>
+            </div>
+
+            <!-- Service 2: Corporate -->
+            <div class="service-detail-grid">
+                <div class="service-image reveal">
+                    <img src="corporate_event_1776575571439.png" alt="Corporate Event">
+                </div>
+                <div class="service-content reveal reveal-delay-1">
+                    <span class="section-tag">Professional Excellence</span>
+                    <h2>Corporate <span class="gradient-text">Events</span></h2>
+                    <p>Elevate your brand with flawlessly executed corporate events. We specialize in product launches, annual meets, and international conferences that leave a lasting impact on your delegates.</p>
+                    <div class="feature-list">
+                        <div class="feature-item">✦ Stage & Sound</div>
+                        <div class="feature-item">✦ Delegate Invites</div>
+                        <div class="feature-item">✦ Branding Walls</div>
+                        <div class="feature-item">✦ Workshop Kits</div>
+                        <div class="feature-item">✦ Tech Support</div>
+                        <div class="feature-item">✦ VIP Protocols</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline">Book a Meeting</a>
+                </div>
+            </div>
+
+            <!-- Service 3: Birthdays -->
+            <div class="service-detail-grid">
+                <div class="service-image reveal">
+                    <img src="birthday_party_1776575636594.png" alt="Birthday Party">
+                </div>
+                <div class="service-content reveal reveal-delay-1">
+                    <span class="section-tag">Joyful Moments</span>
+                    <h2>Milestone <span class="gradient-text">Celebrations</span></h2>
+                    <p>Whether it's a first birthday or a golden jubilee, we make every birthday special with creative themes and high-energy entertainment options tailored to all age groups.</p>
+                    <div class="feature-list">
+                        <div class="feature-item">✦ Themed Styling</div>
+                        <div class="feature-item">✦ Kids Zone</div>
+                        <div class="feature-item">✦ Cake Design</div>
+                        <div class="feature-item">✦ Magicians/Artists</div>
+                        <div class="feature-item">✦ Return Gifts</div>
+                        <div class="feature-item">✦ Memory Booths</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline">Check Availability</a>
+                </div>
+            </div>
+
+            <!-- Service 4: Concerts -->
+            <div class="service-detail-grid">
+                <div class="service-image reveal">
+                    <img src="concert_odisha_1776575612353.png" alt="Live Concert">
+                </div>
+                <div class="service-content reveal reveal-delay-1">
+                    <span class="section-tag">High Energy Production</span>
+                    <h2>Concerts & <span class="gradient-text">Live Shows</span></h2>
+                    <p>Massive sound systems, intelligent lighting, and complex crowd management. We are Odisha's leaders in producing large-scale cultural fests and celebrity concert nights.</p>
+                    <div class="feature-list">
+                        <div class="feature-item">✦ Line Array Sound</div>
+                        <div class="feature-item">✦ 3D Stage Mapping</div>
+                        <div class="feature-item">✦ Artist Backstage</div>
+                        <div class="feature-item">✦ Crowd Barricading</div>
+                        <div class="feature-item">✦ Security Personnel</div>
+                        <div class="feature-item">✦ Ticketing Portals</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline">Request Quote</a>
+                </div>
+            </div>
+
+            <!-- Service 5: College Fests -->
+            <div class="service-detail-grid">
+                <div class="service-image reveal">
+                    <img src="concert_odisha_1776575612353.png" alt="College Fests" style="filter: hue-rotate(50deg) saturate(1.2);">
+                </div>
+                <div class="service-content reveal reveal-delay-1">
+                    <span class="section-tag">Youthful Vibes</span>
+                    <h2>College <span class="gradient-text">Fests</span></h2>
+                    <p>High-energy college events and cultural fests that students will talk about all year. Providing comprehensive management for DJ nights, inter-college competitions, and massive closing ceremonies.</p>
+                    <div class="feature-list">
+                        <div class="feature-item">✦ DJ & EDM Nights</div>
+                        <div class="feature-item">✦ Sponsor Management</div>
+                        <div class="feature-item">✦ Tech Logistics</div>
+                        <div class="feature-item">✦ Food Stalls Setup</div>
+                        <div class="feature-item">✦ Security Operations</div>
+                        <div class="feature-item">✦ Digital Promotions</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline">Check Availability</a>
+                </div>
+            </div>
+
+            <!-- Service 6: Social Gatherings -->
+            <div class="service-detail-grid">
+                <div class="service-image reveal">
+                    <img src="birthday_party_1776575636594.png" alt="Social Gatherings" style="filter: sepia(0.5) hue-rotate(-20deg);">
+                </div>
+                <div class="service-content reveal reveal-delay-1">
+                    <span class="section-tag">Intimate & Beautiful</span>
+                    <h2>Social <span class="gradient-text">Gatherings</span></h2>
+                    <p>Engagement parties, anniversaries, baby showers, and family reunions. We take the stress out of planning so you can simply enjoy the joyful moments with your loved ones.</p>
+                    <div class="feature-list">
+                        <div class="feature-item">✦ Venue Sourcing</div>
+                        <div class="feature-item">✦ Boutique Decor</div>
+                        <div class="feature-item">✦ Custom Catering</div>
+                        <div class="feature-item">✦ Invitations</div>
+                        <div class="feature-item">✦ Photography</div>
+                        <div class="feature-item">✦ Return Favors</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline">Plan Your Gathering</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section style="padding: 100px 0; background: var(--surface-2); text-align: center;">
+        <div class="container reveal">
+            <h2 style="font-size: 3rem; margin-bottom: 2rem;">Ready to create something <span class="gradient-text">Legendary?</span></h2>
+            <p style="color: var(--text-muted); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Our team is ready to help you plan the event of your dreams. Let's start the conversation today.</p>
+            <a href="contact.html" class="btn btn-primary">Connect with our Team</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo gradient-text">OPT</a>
+                    <p>Creating extraordinary experiences for life's most important moments. Based in the heart of Odisha.</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Weddings</a></li>
+                            <li><a href="services.html">Corporate Events</a></li>
+                            <li><a href="services.html">Birthday Parties</a></li>
+                            <li><a href="services.html">Concerts</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#team">Our Team</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="contact.html">Bhubaneswar Office</a></li>
+                            <li><a href="mailto:hello@optevents.in">hello@optevents.in</a></li>
+                            <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 OPT Events. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn">Li</a>
+                    <a href="#" class="social-btn">Ig</a>
+                    <a href="#" class="social-btn">Fb</a>
+                    <a href="#" class="social-btn">Yt</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CUSTOM CURSOR -->
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Scripts -->
+    <script src="nav.js"></script>
+</body>
+</html>

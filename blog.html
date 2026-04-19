@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Insights | OPT Events</title>
+    <meta name="description" content="Stay updated with the latest trends in event management, wedding decor, and corporate planning from the OPT Events blog.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .blog-page-hero {
+            padding: 10rem 0 4rem;
+            text-align: center;
+        }
+
+        .blog-featured {
+            margin-bottom: 8rem;
+        }
+
+        .featured-post {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            background: var(--surface-3);
+            border-radius: 40px;
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .featured-img {
+            height: 500px;
+            background: url('wedding_bhubaneswar_17765552928.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .featured-content {
+            padding: 4rem;
+        }
+
+        .blog-main-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 3rem;
+            padding-bottom: 8rem;
+        }
+
+        .post-card {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post-img {
+            height: 250px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .post-body {
+            padding: 2.5rem;
+            flex-grow: 1;
+        }
+
+        .post-tag {
+            color: var(--accent-orange);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .post-body h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .post-body p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 1.5rem;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 992px) {
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+            .featured-img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- STICKY NAVIGATION -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo gradient-text">OPT</a>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="blog.html" class="active" style="color: white;">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="padding: 0.7rem 1.8rem; font-size: 0.9rem;">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="blog-page-hero">
+        <div class="container">
+            <span class="section-tag" style="justify-content: center;">Stories & Trends</span>
+            <h1 class="section-title">The <span class="gradient-text">Event Journal</span></h1>
+            <p class="section-desc" style="margin: 0 auto;">Insights, tips, and inspiration from the heart of Odisha's event management leaders.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- FEATURED POST -->
+        <div class="blog-featured reveal">
+            <div class="featured-post">
+                <div class="featured-img"></div>
+                <div class="featured-content">
+                    <span class="post-tag">Featured · Wedding</span>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Why Destination Weddings in Odisha are Trending Globally</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">From the pristine beaches of Puri to the historical grandeur of Bhubaneswar, Odisha is fast becoming a global destination for luxury weddings. Discover why...</p>
+                    <a href="#" class="btn btn-primary">Read Article</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLOG GRID -->
+        <div class="blog-main-grid">
+            
+            <div class="card post-card reveal">
+                <div class="post-img" style="background-image: url('corporate_event_1776575571439.png');"></div>
+                <div class="post-body">
+                    <span class="post-tag">Corporate</span>
+                    <h3>5 Ways to Increase Delegate Engagement at Conferences</h3>
+                    <p>Learn how to use interactive technology and creative seating layouts to keep your audience focused and energized during long corporate sessions.</p>
+                    <div class="post-meta">
+                        <span>March 24, 2025</span>
+                        <span>5 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card post-card reveal reveal-delay-1">
+                <div class="post-img" style="background-image: url('birthday_party_1776575636594.png');"></div>
+                <div class="post-body">
+                    <span class="post-tag">Personal</span>
+                    <h3>The Ultimate Checklist for Your Child's First Birthday</h3>
+                    <p>A step-by-step guide to planning a stress-free and magical first birthday celebration that the whole family will cherish forever.</p>
+                    <div class="post-meta">
+                        <span>March 15, 2025</span>
+                        <span>8 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card post-card reveal reveal-delay-2">
+                <div class="post-img" style="background-image: url('concert_odisha_1776575612353.png');"></div>
+                <div class="post-body">
+                    <span class="post-tag">Production</span>
+                    <h3>Sound & Lighting: Elements of a Successful Live Concert</h3>
+                    <p>Deep dive into the technical world of concert production — and why equipment quality matters more than you think.</p>
+                    <div class="post-meta">
+                        <span>Feb 28, 2025</span>
+                        <span>12 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card post-card reveal">
+                <div class="post-img" style="background-image: url('wedding_bhubaneswar_17765552928.png'); filter: grayscale(0.5);"></div>
+                <div class="post-body">
+                    <span class="post-tag">Decor</span>
+                    <h3>Floral Trends for the 2025 Wedding Season</h3>
+                    <p>Exploring the shift toward sustainable floral design and bold color palettes in modern Indian weddings.</p>
+                    <div class="post-meta">
+                        <span>Feb 10, 2025</span>
+                        <span>6 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card post-card reveal reveal-delay-1">
+                <div class="post-img" style="background-image: url('corporate_event_1776575571439.png'); filter: sepia(0.3);"></div>
+                <div class="post-body">
+                    <span class="post-tag">Management</span>
+                    <h3>Choosing the Right Venue: A Practical Guide</h3>
+                    <p>Common mistakes event planners make when selecting venues and how to avoid them to ensure a smooth flow.</p>
+                    <div class="post-meta">
+                        <span>Jan 25, 2025</span>
+                        <span>10 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card post-card reveal reveal-delay-2">
+                <div class="post-img" style="background-image: url('luxury_wedding_portfolio_1776583123484.png');"></div>
+                <div class="post-body">
+                    <span class="post-tag">Lifestyle</span>
+                    <h3>Balancing Tradition and Modernity in Events</h3>
+                    <p>How to respect cultural rituals while introducing modern aesthetics and technology in traditional ceremonies.</p>
+                    <div class="post-meta">
+                        <span>Jan 12, 2025</span>
+                        <span>7 min read</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo gradient-text">OPT</a>
+                    <p>Creating extraordinary experiences for life's most important moments. Based in the heart of Odisha.</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Weddings</a></li>
+                            <li><a href="services.html">Corporate Events</a></li>
+                            <li><a href="services.html">Birthday Parties</a></li>
+                            <li><a href="services.html">Concerts</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#team">Our Team</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="contact.html">Bhubaneswar Office</a></li>
+                            <li><a href="mailto:hello@optevents.in">hello@optevents.in</a></li>
+                            <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 OPT Events. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn">Li</a>
+                    <a href="#" class="social-btn">Ig</a>
+                    <a href="#" class="social-btn">Fb</a>
+                    <a href="#" class="social-btn">Yt</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CUSTOM CURSOR -->
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Scripts -->
+    <script src="nav.js"></script>
+</body>
+</html>
