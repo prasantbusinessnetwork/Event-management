@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration | OPT Events</title>
+    <meta name="description" content="Register for your next premium event with OPT Events. We handle everything from luxury weddings to corporate galas.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,300;0,400;0,500;0,600;0,700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="style.css?v=7">
+    
+    <style>
+        .register-container {
+            padding: 120px 20px 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .register-card {
+            background: var(--surface-1);
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            padding: 3rem;
+            box-shadow: var(--glow-shadow);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+        }
+
+        .register-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 95, 31, 0.05) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .form-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-header p {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+        }
+
+        .reg-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.1rem;
+            color: white;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus, 
+        .form-group textarea:focus {
+            border-color: var(--accent-orange);
+            background: rgba(255, 255, 255, 0.06);
+            outline: none;
+            box-shadow: 0 0 15px rgba(255, 95, 31, 0.1);
+        }
+
+        .submit-reg-btn {
+            width: 100%;
+            background: var(--primary-gradient);
+            border: none;
+            border-radius: 12px;
+            padding: 1.2rem;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            margin-top: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .submit-reg-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--glow-shadow);
+        }
+
+        @media (max-width: 768px) {
+            .register-container {
+                padding-top: 100px;
+            }
+            .register-card {
+                padding: 2rem;
+            }
+            .reg-form-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            .form-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- STICKY NAVIGATION -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">OPT</a>
+            
+            <div class="nav-links">
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="packages.html">Packages</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="register-container">
+        <div class="register-card reveal">
+            <div class="form-header">
+                <h1 class="gradient-text">Event Registration</h1>
+                <p>Register your interest and let's craft something legendary together.</p>
+            </div>
+
+            <form action="#">
+                <div class="reg-form-grid">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Event Category</label>
+                        <select required>
+                            <option value="">Select Event Type</option>
+                            <option value="wedding">Wedding Gala</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="birthday">Private Birthday</option>
+                            <option value="concert">Live Concert</option>
+                            <option value="other">Others</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Event Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Approx. Guest Count</label>
+                        <input type="number" placeholder="e.g. 200">
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Event Location / Venue Preference</label>
+                        <input type="text" placeholder="e.g. Bhubaneswar, Odisha">
+                    </div>
+                    <div class="form-group full-width">
+                        <label>About the Vision</label>
+                        <textarea rows="4" placeholder="Briefly describe your dream event..."></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-reg-btn">SUBMIT REGISTRATION</button>
+            </form>
+        </div>
+    </main>
+
+    <footer style="padding: 4rem 0 2rem; border-top: 1px solid var(--border-color); text-align: center; margin-top: 4rem;">
+        <div class="container">
+            <a href="index.html" class="logo" style="margin-bottom: 1rem; display: inline-block;">OPT</a>
+            <p style="color: var(--text-dim); margin-bottom: 2rem;">© 2026 OPT Events. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- CUSTOM CURSOR -->
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <a href="contact.html" class="mobile-floating-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 3h12l4 8-10 10L2 11l4-8z"></path>
+            <path d="M11 3L8 11h8L13 3"></path>
+        </svg>
+        BOOK NOW
+    </a>
+
+    <!-- Scripts -->
+    <script src="nav.js?v=4"></script>
+</body>
+</html>
