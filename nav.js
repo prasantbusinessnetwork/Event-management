@@ -33,7 +33,11 @@ const revealCallback = (entries, observer) => {
     });
 };
 
-const revealObserver = new IntersectionObserver(revealCallback, { threshold: 0.1 });
+const revealObserver = new IntersectionObserver(revealCallback, { 
+    root: null,
+    rootMargin: '0px 0px -30px 0px',
+    threshold: 0 
+});
 
 function initSectionReveals() {
     document.querySelectorAll('.reveal, section, .card, .stat-item, .section-title').forEach(el => {
