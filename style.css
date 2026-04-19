@@ -271,16 +271,46 @@ nav .container {
     position: relative;
     padding-top: 5rem;
     overflow: hidden;
-    background: linear-gradient(rgba(13, 13, 13, 0.7), rgba(13, 13, 13, 0.8)), url('wedding_bhubaneswar_1776575552928.png');
-    background-size: cover;
-    background-position: center;
-    animation: kenBurns 200s infinite alternate;
+    background-color: var(--bg-dark);
 }
 
-@keyframes kenBurns {
-    0% { background-size: 110%; background-position: center; }
-    100% { background-size: 130%; background-position: top right; }
+.hero-slides {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+    overflow: hidden;
 }
+
+.hero-slides .slide {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.15); /* Start slightly zoomed in */
+    transition: opacity 2s ease-in-out, transform 8s ease-out, visibility 2s;
+}
+
+.hero-slides .slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1); /* Smooth slow zoom out */
+}
+
+/* Luxury dark overlay to make text pop */
+.hero-slides .slide::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(7, 7, 7, 0.7), rgba(13, 13, 13, 0.95));
+}
+
+.slide-1 { background-image: url('wedding_bhubaneswar_1776575552928.png'); }
+.slide-2 { background-image: url('corporate_event_1776575571439.png'); }
+.slide-3 { background-image: url('birthday_party_1776575636594.png'); }
+.slide-4 { background-image: url('concert_odisha_1776575612353.png'); }
 
 .hero-blobs {
     position: absolute;
@@ -288,7 +318,7 @@ nav .container {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 2;
 }
 
 .blob {

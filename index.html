@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
     
     <!-- Global Styles -->
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -39,12 +39,20 @@
 
     <!-- HERO SECTION -->
     <section id="hero">
+        <!-- Luxury CSS Crossfade Slides -->
+        <div class="hero-slides">
+            <div class="slide slide-1 active"></div>
+            <div class="slide slide-2"></div>
+            <div class="slide slide-3"></div>
+            <div class="slide slide-4"></div>
+        </div>
+
         <div class="hero-blobs">
             <div class="blob blob-1"></div>
             <div class="blob blob-2"></div>
             <div class="blob blob-3"></div>
         </div>
-        <div class="container">
+        <div class="container" style="position: relative; z-index: 5;">
             <div class="hero-content">
                 <span class="hero-badge" style="letter-spacing: 4px;">✦ EXPERTISE · LUXURY · PRECISION</span>
                 <h1 style="font-size: clamp(3rem, 8vw, 5rem); letter-spacing: -2px;">Crafting <span class="gradient-text">Extraordinary</span> Experiences</h1>
@@ -302,6 +310,6 @@
     <a href="contact.html" class="mobile-floating-cta">Book Now</a>
 
     <!-- Scripts -->
-    <script src="nav.js?v=2"></script>
+    <script src="nav.js?v=4"></script>
 </body>
 </html>
