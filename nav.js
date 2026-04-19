@@ -66,9 +66,32 @@ function initNavbarScroll() {
     });
 }
 
+// MOBILE MENU LOGIC
+function initMobileMenu() {
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileBtn && navLinks) {
+        mobileBtn.addEventListener('click', () => {
+            mobileBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+}
+
 // INITIALIZE ALL
 document.addEventListener('DOMContentLoaded', () => {
     initLuxuryInteractions();
     initSectionReveals();
     if (navbar) initNavbarScroll();
+    initMobileMenu();
 });

@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
 
     <!-- Global Styles -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     
     <style>
         .packages-page-hero {
@@ -127,7 +127,12 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <a href="contact.html" class="btn btn-primary" style="padding: 0.7rem 1.8rem; font-size: 0.9rem;">Book Now</a>
+            <a href="contact.html" class="btn btn-primary nav-btn-desktop" style="padding: 0.7rem 1.8rem; font-size: 0.9rem;">Book Now</a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -426,6 +431,8 @@
     <!-- CUSTOM CURSOR -->
     <div id="cursor"></div>
     <div id="cursor-follower"></div>
+
+    <a href="contact.html" class="mobile-floating-cta">Book Now</a>
 
     <!-- Scripts -->
     <script src="nav.js"></script>
