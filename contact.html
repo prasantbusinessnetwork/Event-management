@@ -12,13 +12,24 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
 
     <!-- Global Styles -->
-    <link rel="stylesheet" href="style.css?v=9">
+    <link rel="stylesheet" href="style.css?v=10">
     
     <style>
+        /* Hide floating button on booking pages */
+        .mobile-floating-cta { display: none !important; }
+        
+        @media (max-width: 768px) {
+            .contact-form-wrapper {
+                padding: 1.5rem !important;
+                margin: 0 -10px; /* Stretch a bit more */
+            }
+            .contact-page-hero { padding: 80px 0 40px; }
+        }
         .contact-page-hero {
             padding: 10rem 0 4rem;
             text-align: center;
         }
+    </style>
 
         .contact-wrapper {
             padding: 4rem 0 8rem;
