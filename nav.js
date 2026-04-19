@@ -125,7 +125,7 @@ function initFormSubmission() {
             const data = Object.fromEntries(formData.entries());
 
             // --- IMPORTANT: Replace the URL below with your Google Apps Script Web App URL ---
-            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby-YOUR-SCRIPT-ID/exec';
+            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzXyRmnI9eKLRf--1AOMywv0gvM5YjMT45fWP4k1jzzWtBUn7yxtIHBYcfUVBkmDc-G/exec';
 
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
