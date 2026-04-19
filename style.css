@@ -1068,6 +1068,15 @@ footer {
     .stats-grid { gap: 2rem; justify-content: flex-start; }
     .portfolio-grid { grid-template-columns: 1fr; }
     .portfolio-card.wide { grid-column: auto; }
+    
+    /* Reveal Background Images clearly on Mobile */
+    .hero-blobs { display: none; }
+    .hero-slides .slide::after { 
+        background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.2) 70%, rgba(0,0,0,0.8) 100%); 
+    }
+    .hero-content h1, .hero-content p {
+        text-shadow: 0 2px 15px rgba(0,0,0,0.8);
+    }
     .form-row { grid-template-columns: 1fr; }
     .hero-btns { flex-direction: column; align-items: stretch; width: 100%; max-width: 300px; margin: 0 auto 4rem; }
     .footer-bottom { flex-direction: column; gap: 2rem; text-align: center; }
